@@ -22,6 +22,33 @@ namespace OFtask
             InitializeComponent();
         }
 
+        public void NumberButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if(button != null)
+            {
+                InputTextBox.Text += button.Content.ToString();
+            }
+        }
+
+        public void OperatorButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if(button != null)
+            {
+                InputTextBox.Text += " " + button.Content.ToString() + " ";
+            }
+        }
+
+        public void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if(button != null)
+            {
+                ResultTextBlock.Text = string.Empty;
+            }
+        }
+
         public void CalculateButton_Click(object sender, RoutedEventArgs e)
         {
             try
